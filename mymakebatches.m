@@ -1,8 +1,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%load training data%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-digitdata=[]; %save the data£¬will be cleared from the memory
+digitdata=[]; %save the dataÂ£Â¬will be cleared from the memory
 
-%load the data
+%load the joint RBM training data. data/example.mat is an example.
 
 load mydata_batch; 
 
@@ -18,7 +18,7 @@ end
 save scale_mybatch digitdata;
 
 
-%set parameters for the batch£¬including the number of cases in each batch¡¢the number of batches etc.
+%set parameters for the batchÂ£Â¬including the number of cases in each batchÂ¡Â¢the number of batches etc.
 totnum=size(digitdata,1);%the number of the dataset, 235207
 fprintf(1, 'Size of the training dataset= %5d \n', totnum);
 
