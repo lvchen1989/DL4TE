@@ -9,21 +9,21 @@
 % PURPOSE: Training Gaussian RBM with CD, learning visible nodes' variances as well as sparsity penalty
 
 
-%input of the function£º
-% 1¡¢batchdata : data batches
-% 2¡¢params : the parameters
+%input of the functionï¼š
+% 1ã€batchdata : data batches
+% 2ã€params : the parameters
 
-%output of the function£ºparams1~4 are parameters to train the GRBM
-% 1¡¢vhW : weights between the visible units and hidden units
-% 2¡¢vb  : bias on visible units
-% 3¡¢hb  : bias on hidden units
-% 4¡¢fvar: variance, the square of fstd
-% 5¡¢errs: the reconstruction error for each interation
+%output of the functionï¼šparams1~4 are parameters to train the GRBM
+% 1ã€vhW : weights between the visible units and hidden units
+% 2ã€vb  : bias on visible units
+% 3ã€hb  : bias on hidden units
+% 4ã€fvar: variance, the square of fstd
+% 5ã€errs: the reconstruction error for each interation
 %function [vhW, vb, hb, fvar, errs] = GRBM_Standard(batchdata, params)
 
-% n£ºthe number of cases in each batch
-% d£ºthe dimension of each case
-%nBatches±íÊ¾£ºthe number of batches
+% nï¼šthe number of cases in each batch
+% dï¼šthe dimension of each case
+%nBatchesï¼šthe number of batches
 [n d nBatches]=size(batchdata);%n = 100  d = 200  nBatches
 
 
@@ -54,7 +54,7 @@ assert(params.v_var > 0);%
 fstd = ones(1,d)*sqrt(params.v_var);
 params.v_var=[];
 
-r = params.epislonw; %learning rate for weights£¬you can learn more details in A Practical Guide to Training Restricted Boltzmann Machines
+r = params.epislonw; %learning rate for weightsï¼Œyou can learn more details in A Practical Guide to Training Restricted Boltzmann Machines
 
 %learning rate for STD
 if params.STD == 1
